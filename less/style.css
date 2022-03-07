@@ -1,0 +1,417 @@
+* {
+  margin: 0px;
+  border: 0px;
+}
+body {
+  background-color: #f3f8fb;
+}
+header {
+  display: flex;
+  background-color: #6f3cbd;
+  justify-content: space-between;
+  height: 65px;
+  padding-top: 10px;
+}
+header #logomarca-header {
+  margin-left: 50px;
+  width: 20%;
+  height: auto;
+}
+header #pesquisa-header {
+  width: 70%;
+  height: auto;
+  margin-right: 50px;
+  margin-left: 50px;
+}
+header #pesquisa-header input {
+  margin-top: 10px;
+  border-style: solid;
+  border-radius: 12px;
+  border-width: 0px;
+  width: 100%;
+  height: 50%;
+  background-color: white;
+  font-size: 18px;
+  padding-left: 20px;
+}
+header #pesquisa-header input:focus {
+  outline: none;
+  color: #6f3cbd;
+  background-color: #b8df10;
+}
+header #pesquisa-header textarea:focus,
+header #pesquisa-header select:focus {
+  outline: none;
+}
+header #botoes-header {
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+  height: 75px;
+  margin-right: 20px;
+  font-size: 22px;
+  font-style: oblique;
+}
+header #botoes-header button {
+  color: white;
+  width: 100px;
+  height: 50px;
+  background-color: #6f3cbd;
+  border-style: solid;
+  border-radius: 5px;
+}
+header #botoes-header button:hover {
+  color: #6f3cbd;
+  background-color: #b8df10;
+  border-style: solid;
+}
+header #botoes-header i {
+  padding-right: 10px;
+}
+#barra-categorias {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+#barra-categorias i {
+  margin-right: 10px;
+}
+#barra-categorias button {
+  width: 250px;
+  height: 50px;
+  font-size: 16px;
+  background-color: white;
+  color: black;
+}
+#barra-categorias button:hover {
+  color: #6f3cbd;
+  background-color: #b8df10;
+  border-style: solid;
+}
+#barra-categorias .lista-de-opcoes {
+  position: relative;
+  display: inline-block;
+}
+#barra-categorias .lista-de-opcoes:hover .conteudo-lista {
+  display: block;
+}
+#barra-categorias .lista-de-opcoes:hover .botao-de-opcoes {
+  background-color: #b8df10;
+}
+#barra-categorias .conteudo-lista {
+  display: none;
+  position: absolute;
+  background-color: #b8df10;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+#barra-categorias .conteudo-lista a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+#barra-categorias .conteudo-lista a:hover {
+  background-color: #6f3cbd;
+  color: white;
+}
+#barra-categorias .categorias-selecionadas {
+  display: inline-flex;
+  justify-content: space-between;
+}
+/*Configurações da janela de login modal*/
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 90%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: #000000;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+  padding-top: 60px;
+  /* Set a style for all buttons */
+  /* Extra styles for the cancel button */
+  /* Center the image and position the close button */
+}
+.modal input[type=text],
+.modal input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.modal button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.modal button:hover {
+  opacity: 0.8;
+}
+.modal .cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+.modal .imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+.modal img.avatar {
+  background-color: #6f3cbd;
+  width: 25%;
+  border-radius: 50%;
+}
+.modal .container {
+  padding: 16px;
+}
+.modal span.psw {
+  float: right;
+  padding-top: 16px;
+}
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5px auto;
+  /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+}
+/* The Close Button */
+.close {
+  /* Position it in the top right corner outside of the modal */
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+/* Close button on hover */
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s;
+}
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+/*Configurações e estilos do Slider*/
+.slider {
+  box-sizing: border-box;
+  font-family: Arial;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.slider .numero-slide {
+  color: white;
+  font-size: 18px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0px;
+}
+.slider .imgSlide {
+  vertical-align: middle;
+}
+.slide {
+  display: none;
+}
+.imgSlide {
+  vertical-align: middle;
+}
+.btn-anterior,
+.btn-proximo {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 15px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.4s ease;
+  user-select: none;
+}
+.btn-anterior:hover,
+.btn-proximo:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+.btn-anterior {
+  left: 0;
+  border-radius: 0 5px 5px 0;
+}
+.btn-proximo {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+.indicador {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+.ativo,
+.indicador:hover {
+  background-color: #777;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1.3s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.3s;
+}
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.slider-cards {
+  display: box;
+}
+.slider-cards .titulo-cards {
+  margin-top: 100px;
+  margin-left: 50px;
+  font-size: 28px;
+}
+.slider-cards .container-cards {
+  margin: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.slider-cards .card-arredondado {
+  display: flex;
+  max-width: 100%;
+  height: auto;
+}
+.slider-cards .card-arredondado img {
+  width: 200px;
+  height: auto;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+}
+.slider-cards .card-retangular {
+  display: flex;
+  max-width: 100%;
+  height: auto;
+  background-color: white;
+}
+.slider-cards .card-retangular img {
+  width: 200px;
+  height: 400px;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, 0.2);
+}
+.slider-cards .card-marca {
+  display: flex;
+  max-width: 100%;
+  height: auto;
+}
+.slider-cards .card-marca img {
+  width: auto;
+  height: 150px;
+}
+footer {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #6f3cbd;
+  width: 100%;
+  height: 200px;
+  font-family: sans-serif;
+  color: white;
+}
+footer h2 {
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+footer a {
+  font-size: 18px;
+  font-weight: 300;
+  color: whitesmoke;
+  outline: none;
+  text-decoration: none;
+}
+footer a:focus {
+  outline: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer #forma-pagamento {
+  display: box;
+}
+footer #forma-pagamento #bandeiras {
+  background-color: white;
+  display: inline-flex;
+  justify-content: space-between;
+  vertical-align: baseline;
+}
+footer #forma-pagamento img {
+  width: 75px;
+  height: auto;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+footer #forma-pagamento #elo {
+  padding-top: 15px;
+}
+footer #forma-pagamento #pix {
+  padding-top: 17px;
+  padding-right: 15px;
+}

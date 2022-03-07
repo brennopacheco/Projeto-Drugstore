@@ -1,0 +1,215 @@
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drugstore</title>
+        <link rel="stylesheet/less" type="text/css" href="less\style.less" />
+        <script src="js\less.js" type="text/javascript"></script>
+        <script src="https://kit.fontawesome.com/0462521cd8.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div id="cabecalho">
+            <header>
+                <div id="logomarca-header">
+                    <a href="index.html"><img src="img\drugstore_logo.svg" alt="Logomarca Drug Store"></a>
+                </div>
+                <div id="pesquisa-header">
+                    <input id="barra-pesquisa" type="text" placeholder="Digite o nome, a marca ou o princípio ativo do produto">
+                </div>
+                <div id="botoes-header">
+                    <div id="botao-login-header">
+                        <button onclick="document.getElementById('id02').style.display='block'"><i class="fa-solid fa-user"></i>LOGIN</button>
+                    </div>
+                    <div id="botao-cesta-header">
+                        <button onclick="document.getElementById('id03').style.display='block'"><i class="fa-solid fa-cart-shopping"></i>CESTA</button>
+                    </div>
+                </div>
+            </header>
+            <nav id="barra-categorias">
+                <div class="lista-de-opcoes">
+                    <button class="botao-de-opcoes"><i class="fa-solid fa-bars"></i>TODAS AS CATEGORIAS</button>
+                    <div class="conteudo-lista">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                </div>
+                <div class="categorias-selecionadas">
+                    <button><i class="fa-solid fa-prescription-bottle-medical"></i>MEDICAMENTOS</button>
+                </div>
+                <div>
+                    <button><i class="fa-solid fa-soap"></i>HIGIENE E LIMPEZA</button>
+                </div>
+                <div>
+                    <button><i class="fa-solid fa-capsules"></i>DIETA E SUPLEMENTOS</button>
+                </div>
+                <div>
+                    <button><i class="fa-solid fa-baby-carriage"></i></i>MAMÃE E BEBÊ</button>
+                </div>
+            </nav>
+        </div>
+        <div id="banner">
+            <section class="slider">
+                <div class="slide fade">
+                    <div class="numero-slide">1/3</div>
+                    <img src="produtos/banner.jpg" width="100%" class="img-slide">
+                </div>
+                <div class="slide fade">
+                    <div class="numero-slide">2/3</div>
+                    <img src="produtos/banner2.jpg" width="100%" class="img-slide">
+                </div>
+                <div class="slide fade">
+                    <div class="numero-slide">3/3</div>
+                    <img src="produtos/banner3.jpg" width="100%" class="img-slide">
+                </div>
+                <a class="btn-anterior" onclick="mudarSlide(-1)">&lsaquo;</a>
+                <a class="btn-proximo" onclick="mudarSlide(1)">&rsaquo;</a>
+            </section>
+        </div>
+        <section style="text-align:center">
+            <span class="indicador" onclick="atualSlide(1)"></span>
+            <span class="indicador" onclick="atualSlide(2)"></span>
+            <span class="indicador" onclick="atualSlide(3)"></span>
+        </section>
+        <!-- The Modal -->
+        <div id="id02" class="modal">
+            <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">
+                &times;
+            </span>
+            <!-- Modal Content -->
+            <form class="modal-content animate" action="/action_page.php">
+                <div class="imgcontainer">
+                    <img src="img\user_icon.svg" alt="Avatar" class="avatar">
+                </div>
+                <div class="container">
+                    <label for="uname"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                    <button type="submit">Login</button>
+                    <label>
+                        <input type="checkbox" checked="checked" name="remember"> Remember me
+                    </label>
+                </div>
+                <div class="container" style="background-color:#f1f1f1">
+                    <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+        </div>
+        <script src="js\login-window.js"></script>
+        <section class="slider-cards">
+            <div class="titulo-cards">
+                <h1>PRODUTOS EM DESTAQUE</h1>
+            </div>
+            <div class="container-cards">
+                <div class="card-arredondado">
+                    <a href=""><img src="img/Targifor+C.jpg"></a>
+                </div>
+                <div class="card-arredondado">
+                    <a href=""><img src="img/suplemento-alimentar.png"></a>
+                </div>
+                <div class="card-arredondado">
+                    <a href=""><img src="img/auto-teste-rapido.jpg"></a>
+                </div>
+                <div class="card-arredondado">
+                    <a href="#"><img src="img/OXÍMETRO PULSE FINGERTIP.jpg"></a>
+                </div>
+                <div class="card-arredondado">
+                    <a href=""><img src="img/suplemento.png"></a>
+                </div>
+            </div>
+        </section>
+        <section class="slider-cards">
+            <div class="titulo-cards">
+                <h1>PRODUTOS EM PROMOÇÃO</h1>
+            </div>
+            <div class="container-cards">
+                <div class="card-retangular">
+                    <a href="#"><img src="img/FRALDA HUGGIES.png"></a>
+                    <p>Fralda Huggies</p>
+                    <p class="preco">R$87,49</p>
+                    <input type="submit" name="" value="Comprar">
+                </div>
+                <div class="card-retangular">
+                    <a href="#"><img src="img/Nutren Senior Baunilha.png"></a>
+                    <p>Kit Nutren Baunilha</p>
+                    <p class="preco">R$189,99</p>
+                    <input type="submit" name="" value="Comprar">
+                </div>
+                <div class="card-retangular">
+                    <a href=""><img src="img/protetor-solar.png"></a>
+                    <p>Protetor Solar <br> ever care</p>
+                    <p class="preco">R$39,18</p>
+                    <input type="submit" name="" value="Comprar">
+                </div>
+                <div class="card-retangular">
+                    <a href=""><img src="img/suplemento-vitaminico.png"></a>
+                    <p>Lavitan Vitaminas</p>
+                    <p class="preco">R$37,79</p>
+                    <input type="submit" name="" value="Comprar">
+                </div>
+                <div class="card-retangular">
+                    <a href=""><img src="img/leite-ninho.png"></a>
+                    <p>Leite Ninho +1</p>
+                    <p class="preco">R$34,90</p>
+                    <input type="submit" name="" value="Comprar">
+                </div>
+            </div>
+        </section>
+        <section class="slider-cards">
+            <div class="titulo-cards">
+                <h1>MARCAS POPULARES</h1>
+            </div>
+            <div class="container-cards">
+                <div class="card-marca">
+                    <img src="img\nestle-logo.png">
+                </div>
+                <div class="card-marca">
+                    <img src="img\rexona-logo.png">
+                </div>
+                <div class="card-marca">
+                    <img src="img\johnsons-logo.png">
+                </div>
+                <div class="card-marca">
+                    <img src="img\pampers-logo.png">
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div id="minha-conta">
+                <h2>Minha conta</h2>
+                <a href="#">Novo cadastro</a><br>
+                <a href="#">Atualizar endereço</a><br>
+                <a href="#">Alterar dados pessoais</a><br>
+            </div>
+            <div id="sobre-nos">
+                <h2>Sobre nós</h2>
+                <a href="#">Missão</a><br>
+                <a href="#">História</a><br>
+                <a href="#">Unidades</a><br>
+            </div>
+            <div id="forma-pagamento">
+                <div>
+                    <h2>Formas de pagamento</h2>
+                </div>
+                <div id="bandeiras">
+                    <div>
+                        <img src="img\visa-logo.png" alt="Visa">
+                    </div>
+                    <div>
+                        <img src="img\mastercard-logo.png" alt="Master Card">
+                    </div>
+                    <div id="elo">
+                        <img src="img\elo-logo.png" alt="Elo">
+                    </div>
+                    <div id="pix">
+                        <img src="img\pix-logo.png" alt="PIX">
+                    </div>
+                </div>                
+            </div>
+        </footer>
+    </body>
+    <script src="js\slider-script.js"></script>
+</html>
