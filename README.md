@@ -1,5 +1,7 @@
 # DrugStore
 
+Página do projeto: https://brennopacheco.github.io/Projeto-Drugstore/
+
 Projeto de desenvolvimento de web site de uma drugstore para ecommerce e atendimento a clientes.
 
 ## Getting started
